@@ -79,7 +79,7 @@
         #about-me {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-around;
             min-height: 100vh;
             padding: 8rem 5rem 4rem;
             background: linear-gradient(135deg, #0D1B2A 0%, #1B263B 100%);

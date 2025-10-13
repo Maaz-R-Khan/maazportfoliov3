@@ -1,16 +1,28 @@
-let messageArray = ["Hello, I am Maaz Khan, a Software Engineer and AI Researcher."]; 
-let textPosition = 0; 
-let speed = 100; 
+const messages = ["Hello, I am Maaz Khan, a Software Engineer and AI Researcher."];
+let pos = 0;
+const speed = 100;
 
+function typewriter() {
+  const nodes = document.querySelectorAll(".typewriter"); // h1 and p both have this class
+  const text = messages[0] || "";
+  nodes.forEach(el => {
+    el.innerHTML = text.substring(0, pos + 1) + "<span>\u25AE</span>";
+  });
 
-typewriter = () => {
-    document.querySelector(".typewriter").innerHTML = 
-    messageArray[0].substring(0, textPosition + 1) + "<span>\u25ae</span>"; 
-
-    if(textPosition++ != messageArray[0].length) {
-        setTimeout(typewriter, speed); 
-    }
-
+  if (pos < text.length - 1) {
+    pos++;
+    setTimeout(typewriter, speed);
+  }
 }
 
-window.addEventListener("load", typewriter);
+document.addEventListener("DOMContentLoaded", () => {
+  typewriter(); // <-- start it!
+
+  // your timeline code (kept)
+  const tl = document.querySelector(".timeline");
+  if (!tl) return;
+  const io = new IntersectionObserver(([e]) => {
+    if (e.isIntersecting) { tl.classList.add("animate"); io.disconnect(); }
+  }, { threshold: 0.2 });
+  io.observe(tl);
+});

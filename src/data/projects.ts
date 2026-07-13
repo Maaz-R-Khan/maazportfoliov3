@@ -36,11 +36,11 @@ export const projects: Project[] = [
     demoUrl: 'https://www.youtube.com/watch?v=hgb-N_jNHoU',
     githubUrl: 'https://github.com/Maaz-R-Khan/chatbot',
   },
-  {
-    title: 'ToDo App',
-    description:
-      'A responsive task management application with an intuitive interface. Features include task creation, completion tracking, and local storage persistence for seamless user experience.',
-    image: '/images/todoapp.png',
-    tech: ['JavaScript', 'HTML', 'CSS'],
-  },
+  // {
+  //   title: 'ToDo App',
+  //   description:
+  //     'A responsive task management application with an intuitive interface. Features include task creation, completion tracking, and local storage persistence for seamless user experience.',
+  //   image: '/images/todoapp.png',
+  //   tech: ['JavaScript', 'HTML', 'CSS'],
+  // },
 ]

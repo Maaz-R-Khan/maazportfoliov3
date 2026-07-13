@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-navy text-mist font-sans antialiased;
+}
+
+::selection {
+  @apply bg-accent/40 text-white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-navy;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent;
+}
+
+.section-heading {
+  @apply font-mono text-sm tracking-[0.3em] uppercase text-accent mb-3;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-bold text-mist mb-12;
+}
+
+.glass-card {
+  @apply bg-navy-light/60 backdrop-blur-sm border border-accent/15 rounded-xl;
+}
